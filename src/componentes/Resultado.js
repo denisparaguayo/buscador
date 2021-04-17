@@ -8,7 +8,7 @@ class Resultado extends Component {
 
         const imagenes = this.props.imagenes;
         if (imagenes.length === 0) return null;
-        console.log(imagenes);
+        // console.log(imagenes);
         return (
             <React.Fragment>
                 <div className="col-12 p-5 row">
@@ -20,7 +20,10 @@ class Resultado extends Component {
                     ) ) }
     
                 </div>
-                <Paginacion/>
+                <Paginacion
+                    paginaAnterior={this.props.paginaAnterior}
+                    paginaSiguiente={this.props.paginaSiguiente}
+                />
             </React.Fragment>
          )
     }
